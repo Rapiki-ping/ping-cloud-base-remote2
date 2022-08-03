@@ -10,15 +10,17 @@
 - Add ArgoCD slack notifications secret within SSM and remove from k8s secret
 - Added argo-events version 1.7.2
 - Enable newrelic-logging for host logs and service cluster-tools pods(kube-system namespace + external-dns)
-- Resolve tag _grokparsefailure and log components are missing 
+- Resolve tag _grokparsefailure and log components are missing
 - Add new env_var "DEFAULT_USER_BASE_DN"
 - Added event source and webhook for argo-events to enable notification
 - LEGACY_LOGGING defaulted to False
-- update pingcloud-bom and pingcloud-oauth securityContext with allowPrivilegeEscalation set to false 
+- update pingcloud-bom and pingcloud-oauth securityContext with allowPrivilegeEscalation set to false
 - Use camelCase for healthcheck test tags and filenames
+- Added ArgoCD slack notification configuration
 
 _Changes:_
 
+- [X] PDO-2300 Add ArgoCD slack notifications for better visibility into failure to apply manifests
 - [X] PDO-3785 Add PGO database to CI/CD
 - [X] PDO-3791 Create hook script to enable outbound provisioning
 - [X] PDO-3823 Add newrelic-metadata pod to send metadata to NewRelic
@@ -183,7 +185,7 @@ _Changes:_
 - [X] PDO-3907 Create Cluster Health Tests for Health Checks Pt 1
 - [X] PDO-3910 Create a logstash parsers for all ping-app non-SIEM logs
 - [X] PDO-3911 Warning message in es-cluster pods logs
-- [X] PDO-3912 Few PF Kibana Dashboards and one PD Kibana Dashboard not showing data 
+- [X] PDO-3912 Few PF Kibana Dashboards and one PD Kibana Dashboard not showing data
 - [X] PDO-3913 Few data views are listed twice in Kibana Discover tab
 - [X] PDO-3915 Create Reaper Deployment in PCB
 - [X] PDO-3919 Create Cluster Health Tests for Health Checks Pt 2
@@ -386,7 +388,7 @@ _Changes:_
 - [X] PDO-3401 Upgrade PingFederate to v10.3.5 to resolve security vulnerability SECADV029 and SECBL021
 - [X] PDO-3513 (BugFix) Logstash crashlooping due to updated plugin dependencies
 - [X] PDO-3764 Turn off pod logs from going into NewRelic
-- [X] PDO-3782 Encrypt K8s StorageClass 
+- [X] PDO-3782 Encrypt K8s StorageClass
 
 ### 1.11.0
 
